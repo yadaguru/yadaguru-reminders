@@ -24,7 +24,13 @@ describe('The reminderGenerationService', function() {
             done();
           });
       });
+    var todaysDate = moment.utc('2016-12-18');
+    this.clock = sinon.useFakeTimers(todaysDate.valueOf());
   });
+
+  afterEach(function() {
+    this.clock.restore();
+  })
 
   it('should get all reminders associated with a school and user', function() {
     return reminderGenerationService.getRemindersForSchool(1, 1, '2017-01-01').then(function(reminders) {

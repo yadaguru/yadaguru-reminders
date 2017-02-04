@@ -387,7 +387,7 @@ describe('The reminderGenerationService', function() {
         message: 'Ask your counselor',
         detail: 'Tips for asking your counselor',
         lateMessage: 'Too late',
-        lateDetail: '',
+        lateDetail: 'Whoops',
         category: 'Recommendations',
         baseReminderId: '2',
         schoolId: '1',
@@ -431,11 +431,69 @@ describe('The reminderGenerationService', function() {
           message: 'Ask your counselor',
           detail: 'Tips for asking your counselor',
           lateMessage: 'Too late',
-          lateDetail: ''
+          lateDetail: 'Whoops'
         }]
       }];
 
       reminderGenerator.groupAndSortByDueDate(input).should.deep.equal(output);
+    });
+
+    it('should ignore past dates where lateMessage or lateDetail are not used', function() {
+      var input = [{
+        id: '1',
+        dueDate: '2016-02-06',
+        timeframe: 'One day before',
+        name: 'Write Essay',
+        message: 'Better get writing!',
+        detail: 'Some help for writing your essay',
+        lateMessage: 'Too late',
+        lateDetail: 'Should have started sooner',
+        category: 'Essays',
+        baseReminderId: '1',
+        schoolId: '1',
+        schoolName: 'Temple',
+        schoolDueDate: '2017-02-07'
+      }, {
+        id: '2',
+        dueDate: '2016-02-06',
+        timeframe: 'One day before',
+        name: 'Get Recommendations',
+        message: 'Ask your counselor',
+        detail: 'Tips for asking your counselor',
+        lateMessage: 'Too late',
+        lateDetail: '',
+        category: 'Recommendations',
+        baseReminderId: '2',
+        schoolId: '1',
+        schoolName: 'Temple',
+        schoolDueDate: '2017-02-07'
+      }, {
+        id: '3',
+        dueDate: '2016-01-31',
+        timeframe: 'One week before',
+        name: 'Complete application',
+        message: 'Fill it out',
+        detail: 'Do not forget anything',
+        lateMessage: '',
+        lateDetail: 'Whoops',
+        category: 'Application',
+        baseReminderId: '3',
+        schoolId: '1',
+        schoolName: 'Temple',
+        schoolDueDate: '2017-02-07'
+      }];
+
+      var output = [{
+        dueDate: '2016-08-31',
+        reminders: [{
+          id: '1',
+          name: 'Write Essay',
+          message: 'Better get writing!',
+          detail: 'Some help for writing your essay',
+          lateMessage: 'Too late',
+          lateDetail: 'Should have started sooner'
+        }]
+      }];
     });
 
     it('can also handle grouping of testDate reminders', function() {
