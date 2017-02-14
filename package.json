@@ -10,7 +10,7 @@
   "scripts": {
     "test": "NODE_ENV=test mocha --recursive"
   },
-  "author": "",
+  "author": "yadaguru",
   "license": "ISC",
   "devDependencies": {
     "chai": "3.5.0",
@@ -22,6 +22,6 @@
   },
   "dependencies": {
     "moment": "2.14.1",
-    "yadaguru-data": "git+https://github.com/yadaguru/yadaguru-data.git#master"
+    "yadaguru-data": "0.0.3"
   }
 }
