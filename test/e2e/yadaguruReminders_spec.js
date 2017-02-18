@@ -108,9 +108,7 @@ describe('The reminderGenerationService', function() {
         id: '3',
         name: 'Complete application',
         message: 'Fill it out',
-        detail: 'Do not forget anything',
-        lateMessage: 'You are late!',
-        lateDetail: 'Whoops'
+        detail: 'Do not forget anything'
       }]
     }, {
       dueDate: '2017-02-06',
@@ -118,16 +116,12 @@ describe('The reminderGenerationService', function() {
         id: '1',
         name: 'Write Essay',
         message: 'Better get writing!',
-        detail: 'Some help for writing your essay',
-        lateMessage: 'Too late',
-        lateDetail: 'Should have started sooner'
+        detail: 'Some help for writing your essay'
       }, {
         id: '2',
         name: 'Get Recommendations',
         message: 'Ask your counselor',
-        detail: 'Tips for asking your counselor',
-        lateMessage: 'Too late',
-        lateDetail: ''
+        detail: 'Tips for asking your counselor'
       }]
     }])
   });
