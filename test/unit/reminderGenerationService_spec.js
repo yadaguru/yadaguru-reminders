@@ -225,9 +225,7 @@ describe('The reminderGenerationService', function() {
           id: '1',
           name: 'Write Essay',
           message: 'Better get writing!',
-          detail: 'Some help for writing your essay',
-          lateMessage: 'Too late',
-          lateDetail: 'Should have started sooner'
+          detail: 'Some help for writing your essay'
         }]
       }];
 
@@ -271,16 +269,12 @@ describe('The reminderGenerationService', function() {
           id: '1',
           name: 'Write Essay',
           message: 'Better get writing!',
-          detail: 'Some help for writing your essay',
-          lateMessage: 'Too late',
-          lateDetail: 'Should have started sooner'
+          detail: 'Some help for writing your essay'
         }, {
           id: '2',
           name: 'Get Recommendations',
           message: 'Ask your counselor',
-          detail: 'Tips for asking your counselor',
-          lateMessage: 'Too late',
-          lateDetail: ''
+          detail: 'Tips for asking your counselor'
         }]
       }];
 
@@ -338,9 +332,7 @@ describe('The reminderGenerationService', function() {
           id: '3',
           name: 'Complete application',
           message: 'Fill it out',
-          detail: 'Do not forget anything',
-          lateMessage: 'You are late!',
-          lateDetail: 'Whoops'
+          detail: 'Do not forget anything'
         }]
       }, {
         dueDate: '2017-02-06',
@@ -348,16 +340,12 @@ describe('The reminderGenerationService', function() {
           id: '1',
           name: 'Write Essay',
           message: 'Better get writing!',
-          detail: 'Some help for writing your essay',
-          lateMessage: 'Too late',
-          lateDetail: 'Should have started sooner'
+          detail: 'Some help for writing your essay'
         }, {
           id: '2',
           name: 'Get Recommendations',
           message: 'Ask your counselor',
-          detail: 'Tips for asking your counselor',
-          lateMessage: 'Too late',
-          lateDetail: ''
+          detail: 'Tips for asking your counselor'
         }]
       }];
 
@@ -414,24 +402,18 @@ describe('The reminderGenerationService', function() {
         reminders: [{
           id: '3',
           name: 'Complete application',
-          message: 'Fill it out',
-          detail: 'Do not forget anything',
-          lateMessage: 'You are late!',
-          lateDetail: 'Whoops'
+          message: 'You are late!',
+          detail: 'Whoops'
         }, {
           id: '1',
           name: 'Write Essay',
-          message: 'Better get writing!',
-          detail: 'Some help for writing your essay',
-          lateMessage: 'Too late',
-          lateDetail: 'Should have started sooner'
+          message: 'Too late',
+          detail: 'Should have started sooner'
         }, {
           id: '2',
           name: 'Get Recommendations',
-          message: 'Ask your counselor',
-          detail: 'Tips for asking your counselor',
-          lateMessage: 'Too late',
-          lateDetail: 'Whoops'
+          message: 'Too late',
+          detail: 'Whoops'
         }]
       }];
 
@@ -537,16 +519,12 @@ describe('The reminderGenerationService', function() {
           id: '3',
           name: 'ACT registration due today',
           message: 'A message about registering',
-          detail: 'Some details',
-          lateMessage: '',
-          lateDetail: ''
+          detail: 'Some details'
         }, {
           id: '4',
           name: 'ACT registration due today',
           message: 'A message about registering',
-          detail: 'Some details',
-          lateMessage: '',
-          lateDetail: ''
+          detail: 'Some details'
         }]
       }, {
         dueDate: '2017-02-01',
@@ -554,16 +532,12 @@ describe('The reminderGenerationService', function() {
           id: '3',
           name: 'ACT test today',
           message: 'A message about the test',
-          detail: 'Some details',
-          lateMessage: '',
-          lateDetail: ''
+          detail: 'Some details'
         }, {
           id: '4',
           name: 'ACT test today',
           message: 'A message about the test',
-          detail: 'Some details',
-          lateMessage: '',
-          lateDetail: ''
+          detail: 'Some details'
         }]
       }];
 
