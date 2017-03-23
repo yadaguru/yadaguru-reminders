@@ -106,6 +106,10 @@ describe('The reminderGenerationService', function() {
       dueDate: '2017-01-31',
       reminders: [{
         id: '3',
+        dueDate: '2017-01-31',
+        baseReminderId: '3',
+        schoolId: '1',
+        schoolName: 'Temple',
         name: 'Complete application',
         message: 'Fill it out',
         detail: 'Do not forget anything'
@@ -114,11 +118,19 @@ describe('The reminderGenerationService', function() {
       dueDate: '2017-02-06',
       reminders: [{
         id: '1',
+        dueDate: '2017-02-06',
+        baseReminderId: '1',
+        schoolId: '1',
+        schoolName: 'Temple',
         name: 'Write Essay',
         message: 'Better get writing!',
         detail: 'Some help for writing your essay'
       }, {
         id: '2',
+        dueDate: '2017-02-06',
+        baseReminderId: '2',
+        schoolId: '1',
+        schoolName: 'Temple',
         name: 'Get Recommendations',
         message: 'Ask your counselor',
         detail: 'Tips for asking your counselor'
