@@ -223,6 +223,10 @@ describe('The reminderGenerationService', function() {
         dueDate: '2017-02-06',
         reminders: [{
           id: '1',
+          dueDate: '2017-02-06',
+          baseReminderId: '1',
+          schoolId: '1',
+          schoolName: 'Temple',
           name: 'Write Essay',
           message: 'Better get writing!',
           detail: 'Some help for writing your essay'
@@ -267,11 +271,20 @@ describe('The reminderGenerationService', function() {
         dueDate: '2017-02-06',
         reminders: [{
           id: '1',
+          dueDate: '2017-02-06',
+          baseReminderId: '1',
+          schoolId: '1',
+          schoolName: 'Temple',
           name: 'Write Essay',
           message: 'Better get writing!',
           detail: 'Some help for writing your essay'
         }, {
           id: '2',
+          dueDate: '2017-02-06',
+          baseReminderId: '2',
+          schoolId: '1',
+          schoolName: 'Temple',
+          name: 'Write Essay',
           name: 'Get Recommendations',
           message: 'Ask your counselor',
           detail: 'Tips for asking your counselor'
@@ -330,6 +343,10 @@ describe('The reminderGenerationService', function() {
         dueDate: '2017-01-31',
         reminders: [{
           id: '3',
+          dueDate: '2017-01-31',
+          baseReminderId: '3',
+          schoolId: '1',
+          schoolName: 'Temple',
           name: 'Complete application',
           message: 'Fill it out',
           detail: 'Do not forget anything'
@@ -338,11 +355,19 @@ describe('The reminderGenerationService', function() {
         dueDate: '2017-02-06',
         reminders: [{
           id: '1',
+          dueDate: '2017-02-06',
+          baseReminderId: '1',
+          schoolId: '1',
+          schoolName: 'Temple',
           name: 'Write Essay',
           message: 'Better get writing!',
           detail: 'Some help for writing your essay'
         }, {
           id: '2',
+          dueDate: '2017-02-06',
+          baseReminderId: '2',
+          schoolId: '1',
+          schoolName: 'Temple',
           name: 'Get Recommendations',
           message: 'Ask your counselor',
           detail: 'Tips for asking your counselor'
@@ -401,16 +426,28 @@ describe('The reminderGenerationService', function() {
         dueDate: '2016-08-31',
         reminders: [{
           id: '3',
+          dueDate: '2016-08-31',
+          baseReminderId: '3',
+          schoolId: '1',
+          schoolName: 'Temple',
           name: 'Complete application',
           message: 'You are late!',
           detail: 'Whoops'
         }, {
           id: '1',
+          dueDate: '2016-08-31',
+          baseReminderId: '1',
+          schoolId: '1',
+          schoolName: 'Temple',
           name: 'Write Essay',
           message: 'Too late',
           detail: 'Should have started sooner'
         }, {
           id: '2',
+          dueDate: '2016-08-31',
+          baseReminderId: '2',
+          schoolId: '1',
+          schoolName: 'Temple',
           name: 'Get Recommendations',
           message: 'Too late',
           detail: 'Whoops'
@@ -469,6 +506,9 @@ describe('The reminderGenerationService', function() {
         dueDate: '2016-08-31',
         reminders: [{
           id: '1',
+          dueDate: '2016-08-31',
+          schoolId: '1',
+          schoolName: 'Temple',
           name: 'Write Essay',
           message: 'Better get writing!',
           detail: 'Some help for writing your essay',
@@ -517,11 +557,19 @@ describe('The reminderGenerationService', function() {
         dueDate: '2017-01-01',
         reminders: [{
           id: '3',
+          dueDate: '2017-01-01',
+          schoolId: undefined,
+          schoolName: undefined,
+          baseReminderId: undefined,
           name: 'ACT registration due today',
           message: 'A message about registering',
           detail: 'Some details'
         }, {
           id: '4',
+          dueDate: '2017-01-01',
+          schoolId: undefined,
+          schoolName: undefined,
+          baseReminderId: undefined,
           name: 'ACT registration due today',
           message: 'A message about registering',
           detail: 'Some details'
@@ -530,11 +578,19 @@ describe('The reminderGenerationService', function() {
         dueDate: '2017-02-01',
         reminders: [{
           id: '3',
+          dueDate: '2017-02-01',
+          schoolId: undefined,
+          schoolName: undefined,
+          baseReminderId: undefined,
           name: 'ACT test today',
           message: 'A message about the test',
           detail: 'Some details'
         }, {
           id: '4',
+          dueDate: '2017-02-01',
+          schoolId: undefined,
+          schoolName: undefined,
+          baseReminderId: undefined,
           name: 'ACT test today',
           message: 'A message about the test',
           detail: 'Some details'
@@ -885,84 +941,6 @@ describe('The reminderGenerationService', function() {
         schoolId: '3',
         schoolName: 'Penn',
         schoolDueDate: '2017-02-07'
-      }];
-
-      reminderGenerator.deDuplicateReminders(input).should.deep.equal(output);
-    });
-
-    it('should not combine schools if the dueDate does not match', function() {
-      var input = [{
-        id: '1',
-        dueDate: '2017-02-06',
-        timeframe: 'One day before',
-        name: 'Write Essay',
-        message: 'Better get writing!',
-        detail: 'Some help for writing your %SCHOOL% essay for %SCHOOL%',
-        lateMessage: 'Too late',
-        lateDetail: 'Should have started sooner',
-        category: 'Essays',
-        baseReminderId: '1',
-        schoolId: '1',
-        schoolName: 'Temple',
-        schoolDueDate: '2017-02-07'
-      }, {
-        id: '2',
-        dueDate: '2017-02-06',
-        timeframe: 'One day before',
-        name: 'Write Essay',
-        message: 'Better get writing!',
-        detail: 'Some help for writing your %SCHOOL% essay for %SCHOOL%',
-        lateMessage: 'Too late',
-        lateDetail: 'Should have started sooner',
-        category: 'Essays',
-        baseReminderId: '1',
-        schoolId: '2',
-        schoolName: 'Drexel',
-        schoolDueDate: '2017-02-07'
-      }, {
-        id: '3',
-        dueDate: '2017-02-07',
-        timeframe: 'One day before',
-        name: 'Write Essay',
-        message: 'Better get writing!',
-        detail: 'Some help for writing your %SCHOOL% essay for %SCHOOL%',
-        lateMessage: 'Too late',
-        lateDetail: 'Should have started sooner',
-        category: 'Essays',
-        baseReminderId: '1',
-        schoolId: '3',
-        schoolName: 'Penn',
-        schoolDueDate: '2017-02-08'
-      }];
-
-      var output = [{
-        id: ['1', '2'],
-        dueDate: '2017-02-06',
-        timeframe: 'One day before',
-        name: 'Write Essay',
-        message: 'Better get writing!',
-        detail: 'Some help for writing your %SCHOOL% essay for %SCHOOL%',
-        lateMessage: 'Too late',
-        lateDetail: 'Should have started sooner',
-        category: 'Essays',
-        baseReminderId: '1',
-        schoolId: ['1', '2'],
-        schoolName: 'Temple and Drexel',
-        schoolDueDate: '2017-02-07'
-      }, {
-        id: '3',
-        dueDate: '2017-02-07',
-        timeframe: 'One day before',
-        name: 'Write Essay',
-        message: 'Better get writing!',
-        detail: 'Some help for writing your %SCHOOL% essay for %SCHOOL%',
-        lateMessage: 'Too late',
-        lateDetail: 'Should have started sooner',
-        category: 'Essays',
-        baseReminderId: '1',
-        schoolId: '3',
-        schoolName: 'Penn',
-        schoolDueDate: '2017-02-08'
       }];
 
       reminderGenerator.deDuplicateReminders(input).should.deep.equal(output);
