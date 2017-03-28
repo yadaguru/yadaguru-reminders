@@ -1,6 +1,6 @@
 {
   "name": "yadaguru-reminders",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "dependencies": {
     "moment": {
       "version": "2.14.1",
