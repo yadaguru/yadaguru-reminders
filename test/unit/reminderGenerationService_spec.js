@@ -227,6 +227,7 @@ describe('The reminderGenerationService', function() {
           baseReminderId: '1',
           schoolId: '1',
           schoolName: 'Temple',
+          schoolDueDate: '2017-02-07',
           name: 'Write Essay',
           message: 'Better get writing!',
           detail: 'Some help for writing your essay'
@@ -275,6 +276,7 @@ describe('The reminderGenerationService', function() {
           baseReminderId: '1',
           schoolId: '1',
           schoolName: 'Temple',
+          schoolDueDate: '2017-02-07',
           name: 'Write Essay',
           message: 'Better get writing!',
           detail: 'Some help for writing your essay'
@@ -284,6 +286,7 @@ describe('The reminderGenerationService', function() {
           baseReminderId: '2',
           schoolId: '1',
           schoolName: 'Temple',
+          schoolDueDate: '2017-02-07',
           name: 'Write Essay',
           name: 'Get Recommendations',
           message: 'Ask your counselor',
@@ -347,6 +350,7 @@ describe('The reminderGenerationService', function() {
           baseReminderId: '3',
           schoolId: '1',
           schoolName: 'Temple',
+          schoolDueDate: '2017-02-07',
           name: 'Complete application',
           message: 'Fill it out',
           detail: 'Do not forget anything'
@@ -359,6 +363,7 @@ describe('The reminderGenerationService', function() {
           baseReminderId: '1',
           schoolId: '1',
           schoolName: 'Temple',
+          schoolDueDate: '2017-02-07',
           name: 'Write Essay',
           message: 'Better get writing!',
           detail: 'Some help for writing your essay'
@@ -368,6 +373,7 @@ describe('The reminderGenerationService', function() {
           baseReminderId: '2',
           schoolId: '1',
           schoolName: 'Temple',
+          schoolDueDate: '2017-02-07',
           name: 'Get Recommendations',
           message: 'Ask your counselor',
           detail: 'Tips for asking your counselor'
@@ -430,6 +436,7 @@ describe('The reminderGenerationService', function() {
           baseReminderId: '3',
           schoolId: '1',
           schoolName: 'Temple',
+          schoolDueDate: '2017-02-07',
           name: 'Complete application',
           message: 'You are late!',
           detail: 'Whoops'
@@ -439,6 +446,7 @@ describe('The reminderGenerationService', function() {
           baseReminderId: '1',
           schoolId: '1',
           schoolName: 'Temple',
+          schoolDueDate: '2017-02-07',
           name: 'Write Essay',
           message: 'Too late',
           detail: 'Should have started sooner'
@@ -448,6 +456,7 @@ describe('The reminderGenerationService', function() {
           baseReminderId: '2',
           schoolId: '1',
           schoolName: 'Temple',
+          schoolDueDate: '2017-02-07',
           name: 'Get Recommendations',
           message: 'Too late',
           detail: 'Whoops'
@@ -560,6 +569,7 @@ describe('The reminderGenerationService', function() {
           dueDate: '2017-01-01',
           schoolId: undefined,
           schoolName: undefined,
+          schoolDueDate: undefined,
           baseReminderId: undefined,
           name: 'ACT registration due today',
           message: 'A message about registering',
@@ -569,6 +579,7 @@ describe('The reminderGenerationService', function() {
           dueDate: '2017-01-01',
           schoolId: undefined,
           schoolName: undefined,
+          schoolDueDate: undefined,
           baseReminderId: undefined,
           name: 'ACT registration due today',
           message: 'A message about registering',
@@ -581,6 +592,7 @@ describe('The reminderGenerationService', function() {
           dueDate: '2017-02-01',
           schoolId: undefined,
           schoolName: undefined,
+          schoolDueDate: undefined,
           baseReminderId: undefined,
           name: 'ACT test today',
           message: 'A message about the test',
@@ -590,6 +602,7 @@ describe('The reminderGenerationService', function() {
           dueDate: '2017-02-01',
           schoolId: undefined,
           schoolName: undefined,
+          schoolDueDate: undefined,
           baseReminderId: undefined,
           name: 'ACT test today',
           message: 'A message about the test',
