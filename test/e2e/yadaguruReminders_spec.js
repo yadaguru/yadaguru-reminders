@@ -110,6 +110,7 @@ describe('The reminderGenerationService', function() {
         baseReminderId: '3',
         schoolId: '1',
         schoolName: 'Temple',
+        schoolDueDate: '2017-02-07',
         name: 'Complete application',
         message: 'Fill it out',
         detail: 'Do not forget anything'
@@ -122,6 +123,7 @@ describe('The reminderGenerationService', function() {
         baseReminderId: '1',
         schoolId: '1',
         schoolName: 'Temple',
+        schoolDueDate: '2017-02-07',
         name: 'Write Essay',
         message: 'Better get writing!',
         detail: 'Some help for writing your essay'
@@ -131,6 +133,7 @@ describe('The reminderGenerationService', function() {
         baseReminderId: '2',
         schoolId: '1',
         schoolName: 'Temple',
+        schoolDueDate: '2017-02-07',
         name: 'Get Recommendations',
         message: 'Ask your counselor',
         detail: 'Tips for asking your counselor'
