@@ -22,6 +22,6 @@
   },
   "dependencies": {
     "moment": "2.14.1",
-    "yadaguru-data": "0.0.3"
+    "yadaguru-data": "^0.1.0"
   }
 }
